@@ -24,31 +24,31 @@
     <h6>
         Instructor, Mr Joseph
     </h6>
-    <p>
+    <div><p>
         <!-- writing in bold text-->
         <b>I am Seth Okeyo, a professional, with Bachelor of Arts (criminology, with IT).</b>
          I am currently taking Sofware engineering course at Zindua School. I am passionate about taking
          this course.
-    </p>
+    </p></div>
     <!-- writing in italics-->
-    <p>
+    <div><p>
         Software engineering is a good pathway <i>that openss doors to innovation,creativity,</i>
         and solving real-world problems through technology.<b>I want to learn programming languages<s>
         such C++,java,python,javascript,</s> among others,</b> during the course period.
-    </p>
+    </p></div>
     <!-- used the strong tag-->
-    <p>
+    <div><p>
         I want to understand <strong> data structure, algorithms, and software design principles.</strong>.
         I want to stand out in creating apps, websites, or automation tools and show unmatched
         excellence in every work i do.
-    </p>
+    </p></div>
     <!-- emphasized text-->
-    <p>
+    <div><p>
         <em>I want to develop analytical and creating thinking skills.</em> Engage my peers in our
         class in coding challenges and also do challenges in apps like LeetCode, CodeSignal,
         and HackerRank to strengthen my problem-solving skills.
-    </p>
-    <p>
+    </p></div>
+    <div><p>
         E=mc<sup>2</sup> is Einstein`s famous equation
     </p>
     <p>
@@ -71,10 +71,10 @@
     </p>
     <P>
        <i><u> H<sub>2</sub>O<sub>2</sub> </i></u>Hydrogen peroxide
-    </P>
+    </P></div>
     <!-- Lists -->
      <!-- Unordered -->
-      <h1>unordered list</h1>
+     <div> <h1>unordered list</h1>
       <ul>
         <li>Mango</li>
         <li>Apple</li>
@@ -165,9 +165,9 @@
                 <li>South America</li>
                 <li>Australia</li>
             </li>
-        </ol>
+        </ol></div>
         <!-- Decription Lits -->
-         <h2>Description List</h2>
+         <div><h2>Description List</h2>
          <dl>
             <dt>HTML</dt>
             <dd>A markup language used to create web pages</dd>
@@ -185,8 +185,8 @@
                 <dd>Simple Mail Transfer Protocol</dd>
             <dt>DNS</dt>
                 <dd>Domain Name System</dd>
-          </dl>
-          <h1>Combining List</h1>
+          </dl></div>
+          <div><h1>Combining List</h1>
            <ul>
               <li>HTML
                 <ol>
@@ -204,17 +204,16 @@
                 </dl>
             </li>
             <h1>My Combined List</h1>
-             <>
                 <li>Careers
                     <ol>
                         <li>Teaching</li>
                         <li>Accounting</li>
                         <li>Engineering</li>
                     </ol>
-                </li>
+                </li></div>
             <!-- Semantic Html elements-->
              <header>
-                <h1>This is my webpage</h1>
+               <div> <h1>This is my webpage</h1>
                 <nav>
                     <ul>
                         <li><a href="home">Home</a></li>
@@ -232,6 +231,7 @@
 
                     <button>Get Started</button>
                 </section>
+            <div>
                 <section>
                     <h2>About Us</h2>
                  <P>We are a website building organization</P>
@@ -251,7 +251,9 @@
                             <li><a href="https://ZinduaSchool.com">Zindua School</a></li>
                         </ul>
                      </aside>
-                <hr></section>
+                <hr>
+                </section></div>
+            </div>
                 <!--Validation is a way of ensuring that documents adhere to specfified standards and syntactical rules-->
                 <label for="username">User Name:</label>
                     <input type="text" name="username" required>
@@ -285,8 +287,104 @@
                  <label for="Career">Career:</label>
                  <input type="text" name="Career" required><br>
                  <button submit type="submit">submit</button>
-                 <A
-             </main>
+                 <form action="/submit" mehtod="post">
+                    <!-- radio inputs -->
+                     <p>Gender</p>
+                     <input tupe="radio" id="male" name="gender" value="male">
+                     <label for="male">Male</label>
+                     <input tupe="radio" id="female" name="gender" value="female">
+                     <label for="female">Female</label>
+                     <!-- Checkboxe- you can select more than one -->
+                      <p>Interest</p>
+                      <input type="checkbox" id="coding" name="interest" value="coding">
+                        <label for="coding">coding</label><br>
+
+                      <input type="checkbox" id="Swimming" name="interest" value="Swimming">
+                        <label for="Swimmin;g">Swimming</label><br>
+
+                      <input type="checkbox" id="Football" name="interest" value="football">
+                        <label for="Football">Football</label><br>
+                        <!-- Select dropdowns -->
+                         <label for="Country">Country</label>
+                         <select name="Country" id="Country">
+                            <option value="Select">Select a Country</option>
+                            <option value="Usa">USA</option>
+                            <option value="CAnada">Canada</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="DRC">DRC</option>
+                         </select>
+                         <label for="Sport">Sport</label><br>
+                         <select name="Sport" id="Sport">
+                            <option value="Select">Select a Sport</option>
+                            <option value="Football">Football</option>
+                            <option value="Volleyball">Volleyball</option>
+                            <option value="Athletics">Athletics</option><br>
+                            
+                         </select>
+                         <!-- text Area-->
+                         <div> <label for="message">Message</label><br>
+                          <textarea name="message" id="message" rows="4" cols="50"></textarea>
+                          <!-- grouping form elements-->
+                           <form action="/submit" method="post"><br>
+                                <fieldset>
+                                    <legend> Personal Information</legend>
+                                    <label for=" First Name">First Name:</label>
+                                    <input type="text" id="First Name" required placeholder="Enter your First Name">
+                                     <label for=" Second Name">First Name:</label>
+                                    <input type="text" id="Second Name" required placeholder="Enter your Second Name">
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Preferences</legend>
+                                    <label for=" Newsletter">Subscribe to out Newletter:</label>
+                                    <input type="checkbox" name="Checkbox" id="Newsletter">
+                                </fieldset>
+                                <input type="Submit" value="Submit">
+                                <fieldset>
+                                    <legend> Admission</legend> <br>
+                                    <label for=" First Name">First Name:</label>
+                                    <input type="text" id="First Name" required placeholder="Enter your First Name">
+                                     <label for=" Second Name">other Name:</label>
+                                    <input type="text" id="Second Name" required placeholder="Enter your Second Name"><br>
+                                    <label for=" Name of Previous School">Previous Institution:</label>
+                                    <input type="text" id="Previous Institution" required placeholder="Enter the Name of previos Institution Attended">
+                                    <label for=" Course">Qualifications:</label>
+                                    <input type="text" id="Qualifications" required placeholder="Enter your area of Expertise">
+                                    <label for=" Current Course Preference">Current Course Preference:</label>
+                                    <input type="text" id="Current Course Preference" required placeholder="Enter the Name of Course you want to take in our Institution">
+                                    <label for=" Course level">Course Level:</label>
+                                    <input type="text" id="Course level" required placeholder="Enter your the level; certificate, Diploma, Degree.....">
+                                </fieldset>
+                                <!-- A range Slide-->
+                                <label for="volume">Volume</label>
+                                <input type="range" id="Volume" name="Volume" min="0" max="100" step="1" Value="50">
+                                <input type="Submit" value="Submit">
+                                <!-- Colour Picker-->
+                                 <label color>Choose a color</label>
+                                 <input type="Color" id="color" name="color">
+                                 <input type="Submit" value="Submit">
+                                 <!-- Date Picker-->
+                                  <label for="date">Date of Birth</label>
+                                   <input type="Date" Id="dob" name="dob">
+                                   <input type="Submit" value="Submit">
+                                   <!-- <div></div> tag -->
+                                
+
+                           </form></div>
+                           <!-- Embedding Images-->
+                            <img src="/images/pexels-pixabay-56866.jpg" alt="photo.jpg" width="200px" height="150px"><br>
+                          <!-- Embedding a Video-->
+                           <video controls width="400" height="400" poster="thumbnail.jpg"><br>
+                                <source src="/Videos/3629511-hd_720_900_24fps.mp4" type="video/mp4">Your browser does not support the video content
+                            </video>
+                            
+                           <!-- Embedding audio-->
+                            <audio controls poster="thumbnail.jpg"><br>
+                                <source src="Audios/dark-engine-logo-141942.mp3" type="audio/mp3">
+                                Your browser does not support the audio file 
+                            </audio>
+                                 
+
              <footer>
                 <p>&copy;2025, My website. All rights reserved</p>
              </footer>
